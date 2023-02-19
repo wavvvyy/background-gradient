@@ -1,0 +1,22 @@
+{
+  "name": "background-gradient",
+  "version": "1.0.0",
+  "description": "This is a gradient generator I created as while I was learning to code JS. Basic but Cool",
+  "main": "script.js",
+  "scripts": {
+    "build": "browserify script.js > bundle.js && live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wavvvyy/background-gradient.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wavvvyy/background-gradient/issues"
+  },
+  "homepage": "https://github.com/wavvvyy/background-gradient#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
