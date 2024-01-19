@@ -3,7 +3,7 @@ colorList = document.querySelectorAll("input");
 ptext = document.getElementsByClassName("bg-color")[0];
 randomBtn = document.getElementsByTagName('button')[0];
 
-function bgColorChange(color1, color2){
+function bgColorChange(){
 	bgbody.style.background = "linear-gradient(to right, " + colorList[0].value + ", " + colorList[1].value + ")";
 	ptext.textContent = bgbody.style.background + ";";
 }
@@ -18,13 +18,13 @@ function randomColor(){
 	colorList[0].value = "#" + color1;
 	colorList[1].value = "#" + color2;
 
-	bgColorChange(color1, color2);
+	bgColorChange();
 }
 
 function colorAA(){
 	var color1 = colorList[0].value;
 	var color2 = colorList[1].value;
-	bgColorChange(color1, color2);
+	bgColorChange();
 }
 
 colorList[0].addEventListener("input", colorAA);
