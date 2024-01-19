@@ -3,12 +3,12 @@ colorList = document.querySelectorAll("input");
 ptext = document.getElementsByClassName("bg-color")[0];
 randomBtn = document.getElementsByTagName('button')[0];
 
-function bgColorChange(){
+const bgColorChange = () => {
 	bgbody.style.background = "linear-gradient(to right, " + colorList[0].value + ", " + colorList[1].value + ")";
 	ptext.textContent = bgbody.style.background + ";";
 }
 
-function randomColor(){
+const randomColor = () => {
 	var color1 = Math.floor(Math.random()*16777215).toString(16);
 	var color2 = Math.floor(Math.random()*16777215).toString(16);
 
@@ -21,7 +21,7 @@ function randomColor(){
 	bgColorChange();
 }
 
-function colorAA(){
+const colorAA = () => {
 	var color1 = colorList[0].value;
 	var color2 = colorList[1].value;
 	bgColorChange();
