@@ -1,7 +1,8 @@
-import { without } from "lodash";
+// import { without } from "lodash";
+const _ = require('lodash');
 
 let array1 = [1,2,3,4,5,6,7,8,9];
-console.log('answer :', without(array1, 3));
+console.log('answer :', _.without(array1, 3));
 
 bgbody = document.getElementById("gradient");
 colorList = document.querySelectorAll("input");
