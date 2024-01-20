@@ -23,9 +23,10 @@ eval("/* module decorator */ module = __webpack_require__.nmd(module);\nvar __WE
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("// import { without } from \"lodash\";\r\nconst _ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\r\n\r\nlet array1 = [1,2,3,4,5,6,7,8,9];\r\nconsole.log('answer :', _.without(array1, 3));\r\n\r\nbgbody = document.getElementById(\"gradient\");\r\ncolorList = document.querySelectorAll(\"input\");\r\nptext = document.getElementsByClassName(\"bg-color\")[0];\r\nrandomBtn = document.getElementsByTagName('button')[0];\r\n\r\nfunction bgColorChange(){\r\n\tbgbody.style.background = \"linear-gradient(to right, \" + colorList[0].value + \", \" + colorList[1].value + \")\";\r\n\tptext.textContent = bgbody.style.background + \";\";\r\n}\r\n\r\nfunction randomColor(){\r\n\tvar color1 = Math.floor(Math.random()*16777215).toString(16);\r\n\tvar color2 = Math.floor(Math.random()*16777215).toString(16);\r\n\r\n\tif (color1.length < 6){color1 = \"0\" + color1;}\r\n\telse if (color2.length < 6){color2 = \"0\" + color2;}\r\n\r\n\tcolorList[0].value = \"#\" + color1;\r\n\tcolorList[1].value = \"#\" + color2;\r\n\r\n\tbgColorChange();\r\n}\r\n\r\nfunction colorAA(){\r\n\tvar color1 = colorList[0].value;\r\n\tvar color2 = colorList[1].value;\r\n\tbgColorChange();\r\n}\r\n\r\ncolorList[0].addEventListener(\"input\", colorAA);\r\ncolorList[1].addEventListener(\"input\", colorAA);\r\nrandomBtn.addEventListener(\"click\", randomColor);\n\n//# sourceURL=webpack://background-gradient/./src/index.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n\r\n// const _ = require('lodash');\r\n\r\nlet array1 = [1,2,3,4,5,6,7,8,9];\r\nconsole.log('answer :', (0,lodash__WEBPACK_IMPORTED_MODULE_0__.without)(array1, 3));\r\n\r\nlet bgbody = document.getElementById(\"gradient\");\r\nlet colorList = document.querySelectorAll(\"input\");\r\nlet ptext = document.getElementsByClassName(\"bg-color\")[0];\r\nlet randomBtn = document.getElementsByTagName('button')[0];\r\n\r\nfunction bgColorChange(){\r\n\tbgbody.style.background = \"linear-gradient(to right, \" + colorList[0].value + \", \" + colorList[1].value + \")\";\r\n\tptext.textContent = bgbody.style.background + \";\";\r\n}\r\n\r\nfunction randomColor(){\r\n\tvar color1 = Math.floor(Math.random()*16777215).toString(16);\r\n\tvar color2 = Math.floor(Math.random()*16777215).toString(16);\r\n\r\n\tif (color1.length < 6){color1 = \"0\" + color1;}\r\n\telse if (color2.length < 6){color2 = \"0\" + color2;}\r\n\r\n\tcolorList[0].value = \"#\" + color1;\r\n\tcolorList[1].value = \"#\" + color2;\r\n\r\n\tbgColorChange();\r\n}\r\n\r\nfunction colorAA(){\r\n\tvar color1 = colorList[0].value;\r\n\tvar color2 = colorList[1].value;\r\n\tbgColorChange();\r\n}\r\n\r\ncolorList[0].addEventListener(\"input\", colorAA);\r\ncolorList[1].addEventListener(\"input\", colorAA);\r\nrandomBtn.addEventListener(\"click\", randomColor);\n\n//# sourceURL=webpack://background-gradient/./src/index.js?");
 
 /***/ })
 
@@ -59,6 +60,30 @@ eval("// import { without } from \"lodash\";\r\nconst _ = __webpack_require__(/*
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/global */
 /******/ 	(() => {
 /******/ 		__webpack_require__.g = (function() {
@@ -69,6 +94,22 @@ eval("// import { without } from \"lodash\";\r\nconst _ = __webpack_require__(/*
 /******/ 				if (typeof window === 'object') return window;
 /******/ 			}
 /******/ 		})();
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/node module decorator */

@@ -1,13 +1,13 @@
-// import { without } from "lodash";
-const _ = require('lodash');
+import { without } from "lodash";
+// const _ = require('lodash');
 
 let array1 = [1,2,3,4,5,6,7,8,9];
-console.log('answer :', _.without(array1, 3));
+console.log('answer :', without(array1, 3));
 
-bgbody = document.getElementById("gradient");
-colorList = document.querySelectorAll("input");
-ptext = document.getElementsByClassName("bg-color")[0];
-randomBtn = document.getElementsByTagName('button')[0];
+let bgbody = document.getElementById("gradient");
+let colorList = document.querySelectorAll("input");
+let ptext = document.getElementsByClassName("bg-color")[0];
+let randomBtn = document.getElementsByTagName('button')[0];
 
 function bgColorChange(){
 	bgbody.style.background = "linear-gradient(to right, " + colorList[0].value + ", " + colorList[1].value + ")";
